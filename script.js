@@ -48,11 +48,11 @@ function adjustRatings(players, playerPos) {
 function calcCustomPositivePoints(difference) {
     let differenceAdjustment = document.getElementsByClassName("adjustmentWeight")[0].value * difference / 1000;
 
-    return 10 + differenceAdjustment;
+    return Number(document.getElementsByClassName("defaultPoints")[0].value) + differenceAdjustment;
 }
 
 function calcCustomNegativePoints(difference) {
     let differenceAdjustment = document.getElementsByClassName("adjustmentWeight")[0].value * difference / 1000;
     
-    return -10 + differenceAdjustment;
+    return -Number(document.getElementsByClassName("defaultPoints")[0].value) + differenceAdjustment;
 }
