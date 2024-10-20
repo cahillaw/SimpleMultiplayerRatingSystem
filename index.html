@@ -7,27 +7,67 @@
 </head>
 
 <body onload="calculate();">
+    <h2>Simple Multiplayer Rating System Demo</h2>
     <table border="1" cellspacing="0" cellpadding="0">
         <tr>
-            <th>Finished at rank</th>
-            <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+            <th>Rank</th>
+            <th>Player</th>
+            <th>Starting Rating</th>
+            <th>Rating Change</th>
         </tr>
         <tr>
-            <th>Player starting points</th>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
-            <td><input type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td>1st</td>
+            <td>Player1</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
         </tr>
-        <tr id="pointsResultContainer">
-            <th>Player point delta</th>
-            <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+        <tr>
+            <td>2nd</td>
+            <td>Player2</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
         </tr>
-    <table/>
+        <tr>
+            <td>3rd</td>
+            <td>Player3</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>Player4</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>Player5</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+        <tr>
+            <td>6th</td>
+            <td>Player6</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>Player7</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+        <tr>
+            <td>8th</td>
+            <td>Player8</td>
+            <td><input class="ratingInput" type="number" min="1" value="5000" onChange="calculate();"/></td>
+            <td class="pointsResultContainer"></td>
+        </tr>
+    </table>
+    <h2>Settings</h3>
+    <div> 
+        <td>Adjustment Weight: <input class="adjustmentWeight" type="number" min="0" max="10" value="2" onChange="calculate();"/></td></td>
+    </div>
 </body>
 
 </html>

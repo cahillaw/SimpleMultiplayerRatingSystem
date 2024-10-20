@@ -1,26 +1,18 @@
-const ADJUSTMENT_WEIGHT = 2
-
 function calculate() {
-    let inputs = document.getElementsByTagName('input')
+    let inputs = document.getElementsByClassName('ratingInput')
     let players = new Map()
     let placements = ["Player1", "Player2", "Player3", "Player4", "Player5", "Player6", "Player7", "Player8"]
 
     for (index = 0; index <inputs.length; index++) {
         players.set("Player" + (index + 1), inputs[index].value)
     }
-    console.log(inputs)
-    console.log(players)
 
     let pointsGainedMap = adjustRatings(players, placements)
 
-    let pointsRow = document.getElementById("pointsResultContainer")
+    let pointsRow = document.getElementsByClassName("pointsResultContainer")
     for (index = 0; index <inputs.length; index++) {
         let pointsGained = pointsGainedMap.get("Player" + (index + 1))
-        console.log(pointsGained)
-
-        pointsRow.deleteCell(index + 1)
-        let pointsCell = pointsRow.insertCell(index + 1)
-        pointsCell.innerHTML = pointsGained.toFixed(2)
+        pointsRow[index].innerHTML = pointsGained.toFixed(2)
     }
 }
 
@@ -54,13 +46,13 @@ function adjustRatings(players, playerPos) {
 }
 
 function calcCustomPositivePoints(difference) {
-    let differenceAdjustment = ADJUSTMENT_WEIGHT * difference / 1000;
+    let differenceAdjustment = document.getElementsByClassName("adjustmentWeight")[0].value * difference / 1000;
 
     return 10 + differenceAdjustment;
 }
 
 function calcCustomNegativePoints(difference) {
-    let differenceAdjustment = ADJUSTMENT_WEIGHT * difference / 1000;
+    let differenceAdjustment = document.getElementsByClassName("adjustmentWeight")[0].value * difference / 1000;
     
     return -10 + differenceAdjustment;
 }
